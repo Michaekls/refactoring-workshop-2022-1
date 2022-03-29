@@ -30,6 +30,8 @@ public:
     Controller(Controller const& p_rhs) = delete;
     Controller& operator=(Controller const& p_rhs) = delete;
 
+    void receive(std::unique_ptr<Event<FoodInd>> e) override;
+
     void receive(std::unique_ptr<Event> e) override;
 
 private:
